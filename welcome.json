@@ -1,0 +1,4 @@
+{
+  "message": "Welcome to the Weather Imp server.",
+  "routes": { "/": { "get": "This welcome page" } }
+}
