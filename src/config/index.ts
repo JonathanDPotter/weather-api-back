@@ -13,9 +13,8 @@ const {
   SERVER_TOKEN_EXPIRETIME,
   SERVER_TOKEN_ISSUER,
   SERVER_TOKEN_SECRET,
-  METEOMATICS_USER,
-  METEOMATICS_PASSWORD,
   GEOAPIFY_API_KEY,
+  WEATHER_API_KEY,
 } = process.env;
 
 const SERVER = {
@@ -42,15 +41,14 @@ const MONGO = {
   options: { retryWrites: true },
 };
 
-const METEOMATICS = {
-  user: METEOMATICS_USER,
-  password: METEOMATICS_PASSWORD,
+const WEATHERAPI = {
+  apiKey: WEATHER_API_KEY,
 };
 
 const GEOAPIFY = {
   apiKey: GEOAPIFY_API_KEY,
 };
 
-const config = { SERVER, MONGO, METEOMATICS, GEOAPIFY };
+const config = { SERVER, MONGO, WEATHERAPI, GEOAPIFY };
 
 export default config;

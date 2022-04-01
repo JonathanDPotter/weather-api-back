@@ -14,7 +14,8 @@
       "Icoords",
       "Ilocation",
       "Inew",
-      "Iuser"
+      "Iuser",
+      "WEATHERAPI"
     ]
   }
 }

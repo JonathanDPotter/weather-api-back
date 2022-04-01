@@ -8,6 +8,7 @@ import config from "./config";
 import indexRoutes from "./routes";
 import userRoutes from "./routes/user";
 import geoApifyRoutes from "./routes/geoApify";
+import weatherRoutes from "./routes/weatherAPI";
 
 const server = express();
 
@@ -42,4 +43,5 @@ server.listen(port, () => {
   server.use("", indexRoutes);
   server.use("/api/user", userRoutes);
   server.use("/api/geoapify", geoApifyRoutes);
+  server.use("/api/weather", weatherRoutes);
 });
