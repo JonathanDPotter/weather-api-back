@@ -16,4 +16,16 @@ const getCurrent = async (req: Request, res: Response) => {
   }
 };
 
-export default { getCurrent };
+const getThreeDay = async (req: Request, res: Response) => {
+  const { lat, lon } = req.params;
+  try {
+    const response = await axios.get(
+      `${baseURL}forecast.json?key=${config.WEATHERAPI.apiKey}&q=${lat} ${lon}&days=10&aqi=no&alerts=yes`
+    );
+    res.status(200).json(response.data);
+  } catch (error: any) {
+    res.status(400).json(error);
+  }
+};
+
+export default { getCurrent, getThreeDay };

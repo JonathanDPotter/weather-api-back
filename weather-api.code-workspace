@@ -9,13 +9,20 @@
   ],
   "settings": {
     "cSpell.words": [
+      "feelslike",
+      "forecastday",
       "geoapify",
       "Iauth",
       "Icoords",
+      "Icurrent",
+      "Iforecast",
       "Ilocation",
       "Inew",
       "Iuser",
-      "WEATHERAPI"
+      "localtime",
+      "precip",
+      "WEATHERAPI",
+      "zipcode"
     ]
   }
 }
