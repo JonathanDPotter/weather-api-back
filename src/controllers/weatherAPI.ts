@@ -20,7 +20,7 @@ const getThreeDay = async (req: Request, res: Response) => {
   const { lat, lon } = req.params;
   try {
     const response = await axios.get(
-      `${baseURL}forecast.json?key=${config.WEATHERAPI.apiKey}&q=${lat} ${lon}&days=10&aqi=no&alerts=yes`
+      `${baseURL}forecast.json?key=${config.WEATHERAPI.apiKey}&q=${lat} ${lon}&days=3&aqi=no&alerts=yes`
     );
     res.status(200).json(response.data);
   } catch (error: any) {
