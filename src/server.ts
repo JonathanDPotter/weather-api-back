@@ -6,7 +6,6 @@ import mongoose from "mongoose";
 import config from "./config";
 // routes
 import indexRoutes from "./routes";
-import userRoutes from "./routes/user";
 import geoApifyRoutes from "./routes/geoApify";
 import weatherRoutes from "./routes/weatherAPI";
 
@@ -41,7 +40,6 @@ server.listen(port, () => {
 
   // routes
   server.use("", indexRoutes);
-  server.use("/api/user", userRoutes);
   server.use("/api/geoapify", geoApifyRoutes);
   server.use("/api/weather", weatherRoutes);
 });
