@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
-  "start": "node build/index.js",
-  "build": "tsc",
-  "postinstall": "npm run build"
-},
+  "scripts": {
+    "start": "node dist/src/server.js",
+    "build": "tsc",
+    "postinstall": "npm run build"
+  },
   "engines": {
-    "node": "16.14.2"
+    "node": "17.x"
   },
   "keywords": [],
   "author": "Jonathan Potter <jonathan.d.potter@outlook.com>",
