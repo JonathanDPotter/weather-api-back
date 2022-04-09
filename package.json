@@ -11,7 +11,11 @@
   "engines": {
     "node": "17.x"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "typescript",
+    "node"
+  ],
   "author": "Jonathan Potter <jonathan.d.potter@outlook.com>",
   "license": "MIT",
   "dependencies": {
