@@ -25,8 +25,7 @@ server.listen(port, () => {
   // cors setup
   server.use(
     cors({
-      origin: "https://weather-imp.vercel.app/",
-      allowedHeaders: "*",
+      origin: "https://weather-imp.vercel.app",
       credentials: true,
     })
   );
