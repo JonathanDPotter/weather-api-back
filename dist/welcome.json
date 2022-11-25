@@ -1,0 +1,22 @@
+{
+    "message": "Welcome to the Weather Imp server.",
+    "routes": {
+        "/": { "get": "This welcome page" },
+        "/api/geoapify": {
+            "/coords/:zip": {
+                "get": "Returns latitude and longitude coordinates from the zip code(:zip) provided."
+            },
+            "/city/:lat/:lon": {
+                "get": "Returns the city that is at the latitude(:lat) and longitude(:lon) provided."
+            }
+        },
+        "/api/weather": {
+            "/current/:lat/:lon": {
+                "get": "Returns a json object with the current weather for the lattitude(:lat) and longitude(:lon) provided."
+            },
+            "/three-day/:lat/:lon": {
+                "get": "Returns a json object with the three-day forecast for the lattitude(:lat) and longitude(:lon) provided"
+            }
+        }
+    }
+}

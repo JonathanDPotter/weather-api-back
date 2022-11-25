@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import mongoose from "mongoose";
+import helmet from "helmet";
 // config
 import config from "./config";
 // routes
@@ -29,6 +30,9 @@ server.listen(port, () => {
       allowedHeaders: "*",
     })
   );
+
+  // add helmet
+  server.use(helmet());
 
   // parse requests
   server.use(express.json());
