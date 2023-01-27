@@ -6,10 +6,6 @@ const {
   PORT,
   HOSTNAME,
   NODE_ENV,
-  MONGO_USER,
-  MONGO_PASSWORD,
-  MONGO_HOST,
-  MONGO_COLLECTION,
   GEOAPIFY_API_KEY,
   WEATHER_API_KEY,
 } = process.env;
@@ -32,15 +28,7 @@ const geoApify = {
   apiKey: GEOAPIFY_API_KEY,
 };
 
-const mongo = {
-  user: MONGO_USER,
-  password: MONGO_PASSWORD,
-  host: MONGO_HOST,
-  collection: MONGO_COLLECTION,
-  url: `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}/${MONGO_COLLECTION}`,
-  options: { retryWrites: true },
-};
 
-const config = { server, mongo, weatherAPI, geoApify };
+const config = { server, weatherAPI, geoApify };
 
 export default config;
