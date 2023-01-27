@@ -10,14 +10,11 @@ const {
   MONGO_PASSWORD,
   MONGO_HOST,
   MONGO_COLLECTION,
-  SERVER_TOKEN_EXPIRETIME,
-  SERVER_TOKEN_ISSUER,
-  SERVER_TOKEN_SECRET,
   GEOAPIFY_API_KEY,
   WEATHER_API_KEY,
 } = process.env;
 
-const SERVER = {
+const server = {
   hostname: HOSTNAME,
   port: PORT,
   env: NODE_ENV,
@@ -25,14 +22,17 @@ const SERVER = {
     NODE_ENV === "development"
       ? `http://${HOSTNAME}:${PORT}/`
       : `https://${HOSTNAME}:${PORT}/`,
-  token: {
-    expireTime: SERVER_TOKEN_EXPIRETIME,
-    issuer: SERVER_TOKEN_ISSUER,
-    secret: SERVER_TOKEN_SECRET || "secret",
-  },
 };
 
-const MONGO = {
+const weatherAPI = {
+  apiKey: WEATHER_API_KEY,
+};
+
+const geoApify = {
+  apiKey: GEOAPIFY_API_KEY,
+};
+
+const mongo = {
   user: MONGO_USER,
   password: MONGO_PASSWORD,
   host: MONGO_HOST,
@@ -41,14 +41,6 @@ const MONGO = {
   options: { retryWrites: true },
 };
 
-const WEATHERAPI = {
-  apiKey: WEATHER_API_KEY,
-};
-
-const GEOAPIFY = {
-  apiKey: GEOAPIFY_API_KEY,
-};
-
-const config = { SERVER, MONGO, WEATHERAPI, GEOAPIFY };
+const config = { server, mongo, weatherAPI, geoApify };
 
 export default config;

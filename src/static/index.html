@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="index.js" type="text/javascript" defer></script>
+    <script
+      src="https://kit.fontawesome.com/49df7f434d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather Imp API</title>
+  </head>
+  <body>
+    <header-component></header-component>
+    <main>
+      <section>
+        <h2>Welcome to the back-end for Weather Imp.</h2>
+        <p>
+          This is the back-end for my Weather Imp project. Aside from this home
+          page and an about page, the rest of this site is the API for my
+          front-end appications.
+        </p>
+        <p>
+          I have already completed a working React.js and Vue.js front ends and
+          I plan to add an AngularJS front end as well.
+        </p>
+      </section>
+      <section>
+        <h2>Routes</h2>
+        <p>
+          You can send a GET request to <a href="/routes">/routes</a> to get a
+          JSON object with a list of the available routes which are as follows:
+        </p>
+        <div class="routes"></div>
+      </section>
+      <section>
+        <h2>Links</h2>
+        <p>Click below to go to:</p>
+        <div class="buttons">
+          <a href="https://github.com/JonathanDPotter/weather-api-back"
+            ><button type="button">
+              back-end repo
+              <img
+                src="./icons/github.svg"
+                alt="github icon"
+                height="20px"
+                width="20px"
+              /></button
+          ></a>
+          <a href="https://github.com/JonathanDPotter/weather-api"
+            ><button type="button">
+              react front-end repo
+              <img
+                src="./icons/react.svg"
+                alt="GitHub icon"
+                height="20px"
+                width="20px"
+              /></button
+          ></a>
+          <a href="https://github.com/JonathanDPotter/weather-vue"
+            ><button type="button">
+              vue front-end repo
+              <img
+                src="./icons/vuejs.svg"
+                alt="GitHub icon"
+                height="20px"
+                width="20px"
+              /></button
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer-component link-name="about"></footer-component>
+  </body>
+</html>

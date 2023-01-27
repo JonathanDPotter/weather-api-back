@@ -3,7 +3,7 @@ import axios from "axios";
 import config from "../config";
 import Icoords from "../interfaces/coords";
 
-const { apiKey } = config.GEOAPIFY;
+const { apiKey } = config.geoApify;
 
 const getCity = async (req: Request, res: Response) => {
   const { lat, lon } = req.params;

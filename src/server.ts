@@ -1,48 +1,10 @@
-import express from "express";
-import cors from "cors";
-import morgan from "morgan";
-import mongoose from "mongoose";
-import helmet from "helmet";
-// config
+import createServer from "./utils/createServer";
 import config from "./config";
-// routes
-import indexRoutes from "./routes";
-import geoApifyRoutes from "./routes/geoApify";
-import weatherRoutes from "./routes/weatherAPI";
+import mongoConnect from "./utils/mongoConnect";
 
-const server = express();
+const server = createServer();
 
-const { port } = config.SERVER;
-const { url, options, collection } = config.MONGO;
-
-server.listen(port, () => {
-  console.log(`Server listening on port: ${port}`);
-
-  // connect to mongoose
-  mongoose.connect(url, options, () =>
-    console.log(`Connected to mongodb collection ${collection}`)
-  );
-
-  // cors setup
-  server.use(
-    cors({
-      origin: "*",
-      allowedHeaders: "*",
-    })
-  );
-
-  // add helmet
-  server.use(helmet());
-
-  // parse requests
-  server.use(express.json());
-  server.use(express.urlencoded({ extended: true }));
-
-  // logging with morgan
-  server.use(morgan("dev"));
-
-  // routes
-  server.use("", indexRoutes);
-  server.use("/api/geoapify", geoApifyRoutes);
-  server.use("/api/weather", weatherRoutes);
+server.listen(config.server.port, async () => {
+  console.log(`Server connected on ${config.server.baseURL}`);
+  mongoConnect();
 });
