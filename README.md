@@ -17,24 +17,26 @@ The routes can be viewed [here](https://jonathan-potter-weather-api.herokuapp.co
 ```json
 
 {
-  "message": "Welcome to the Weather Imp server.",
-  "routes": {
-    "/": { "get": "This welcome page" },
-    "/api/geoapify": {
-      "/coords/:zip": {
-        "get": "Returns latitude and longitude coordinates from the zip code(:zip) provided."
-      },
-      "/city/:lat/:lon": {
-        "get": "Returns the city that is at the latitude(:lat) and longitude(:lon) provided."
-      }
-    },
-    "/api/weather": {
-      "/current/:lat/:lon": {
-        "get": "Returns a json object with the current weather for the lattitude(:lat) and longitude(:lon) provided."
-      },
-      "/three-day/:lat/:lon": {
-        "get": "Returns a json object with the three-day forecast for the lattitude(:lat) and longitude(:lon) provided"
-      }
+  "geoapify": {
+    "ROOT": "/api/geoapify",
+    "GET": {
+      "/coords/:zip": "Returns latitude and longitude coordinates from the zip code(:zip) provided.",
+      "/city/:lat/:lon": "Returns the city that is at the latitude(:lat) and longitude(:lon) provided."
+    }
+  },
+  "weather": {
+    "ROOT": "/api/weather",
+    "GET": {
+      "/current/:lat/:lon": "Returns a json object with the current weather for the lattitude(:lat) and longitude(:lon) provided.",
+      "/three-day/:lat/:lon": "Returns a json object with the three-day forecast for the lattitude(:lat) and longitude(:lon) provided"
+    }
+  },
+  "index": {
+    "ROOT": "/",
+    "GET": {
+      "/": "returns the homepage",
+      "/routes": "returns this object",
+      "/healthcheck": "returns a 200 status"
     }
   }
 }
