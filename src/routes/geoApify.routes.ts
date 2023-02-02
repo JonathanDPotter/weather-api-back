@@ -1,5 +1,5 @@
 import { Router } from "express";
-import controller from "../controllers/geoApify";
+import controller from "../controllers/geoApify.controller";
 
 const router = Router();
 

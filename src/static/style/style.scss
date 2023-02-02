@@ -46,6 +46,15 @@ main {
     text-underline-offset: 0.5rem;
   }
 
+  .intro, .about {
+    max-width: 60rem;
+    margin: 0 auto;
+
+    p {
+      text-indent: 4ch;
+    }
+  }
+
   .routes {
     margin: 1rem;
 

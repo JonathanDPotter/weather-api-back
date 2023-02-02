@@ -38,6 +38,13 @@ main h2 {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
+main .intro, main .about {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+main .intro p, main .about p {
+  text-indent: 4ch;
+}
 main .routes {
   margin: 1rem;
 }

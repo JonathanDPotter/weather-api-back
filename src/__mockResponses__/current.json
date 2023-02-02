@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Weehawken",
+    "region": "New Jersey",
+    "country": "United States of America",
+    "lat": 40.73,
+    "lon": -73.94,
+    "tz_id": "America/New_York",
+    "localtime_epoch": 1675367650,
+    "localtime": "2023-02-02 14:54"
+  },
+  "current": {
+    "last_updated_epoch": 1675367100,
+    "last_updated": "2023-02-02 14:45",
+    "temp_c": 3.3,
+    "temp_f": 37.9,
+    "is_day": 1,
+    "condition": {
+      "text": "Sunny",
+      "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+      "code": 1000
+    },
+    "wind_mph": 2.2,
+    "wind_kph": 3.6,
+    "wind_degree": 230,
+    "wind_dir": "SW",
+    "pressure_mb": 1018,
+    "pressure_in": 30.06,
+    "precip_mm": 0,
+    "precip_in": 0,
+    "humidity": 28,
+    "cloud": 0,
+    "feelslike_c": -0.7,
+    "feelslike_f": 30.8,
+    "vis_km": 16,
+    "vis_miles": 9,
+    "uv": 3,
+    "gust_mph": 12.1,
+    "gust_kph": 19.4
+  }
+}

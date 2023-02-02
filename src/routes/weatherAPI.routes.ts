@@ -1,5 +1,5 @@
 import { Router } from "express";
-import controller from "../controllers/weatherAPI";
+import controller from "../controllers/weatherAPI.controller";
 
 const router = Router();
 
