@@ -14,11 +14,12 @@ body {
 }
 
 header {
-  height: 10vh;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
   width: 100vw;
   background-color: #241023;
   color: #f5f5f5;
-  line-height: 10vh;
   left: 0;
   border-bottom: 0.25rem solid #47a025;
 }
@@ -34,25 +35,25 @@ main section {
 }
 main h2 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0;
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.25rem;
 }
-main .intro, main .about {
+main .intro,
+main .about {
   max-width: 60rem;
   margin: 0 auto;
 }
-main .intro p, main .about p {
+main .intro p,
+main .about p {
   text-indent: 4ch;
 }
-main .routes {
+main #routes {
   margin: 1rem;
-}
-main .routes .route-list {
-  margin-left: 1rem;
 }
 main .buttons {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
   padding: 1rem;
 }
@@ -93,11 +94,12 @@ main.not-found a {
 }
 
 footer {
-  height: 10vh;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
   width: 100vw;
   background-color: #241023;
   color: #f5f5f5;
-  line-height: 10vh;
   left: 0;
   border-top: 0.25rem solid #47a025;
   display: grid;

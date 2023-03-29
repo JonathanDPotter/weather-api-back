@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./style/style.css" />
     <script src="index.js" type="text/javascript" async></script>
     <script
-      src="https://kit.fontawesome.com/49df7f434d.js"
-      crossorigin="anonymous"
+      type="module"
+      src="https://md-block.verou.me/md-block.js"
+      async
     ></script>
     <title>Weather Imp API</title>
   </head>
@@ -24,8 +25,8 @@
         </p>
         <br />
         <p>
-          I have already completed working React.js and Vue.js front ends and
-          I plan to add an AngularJS front end as well.
+          I have already completed working React.js and Vue.js front ends and I
+          plan to add an AngularJS front end as well.
         </p>
       </section>
       <section>
@@ -34,11 +35,10 @@
           You can send a GET request to <a href="/routes">/routes</a> to get a
           JSON object with a list of the available routes which are as follows:
         </p>
-        <div class="routes"></div>
+        <pre id="routes"></pre>
       </section>
       <section>
         <h2>Links</h2>
-        <p>Click below to go to:</p>
         <div class="buttons">
           <a href="https://github.com/JonathanDPotter/weather-api-back"
             ><button type="button">
@@ -54,7 +54,7 @@
             ><button type="button">
               react front-end repo
               <img
-                src="./icons/react.svg"
+                src="./icons/github.svg"
                 alt="GitHub icon"
                 height="20px"
                 width="20px"
@@ -63,6 +63,26 @@
           <a href="https://github.com/JonathanDPotter/weather-vue"
             ><button type="button">
               vue front-end repo
+              <img
+                src="./icons/github.svg"
+                alt="GitHub icon"
+                height="20px"
+                width="20px"
+              /></button
+          ></a>
+          <a href="https://weather-l95e66yd3-jonathandpotter.vercel.app/"
+            ><button type="button">
+              react front-end app
+              <img
+                src="./icons/react.svg"
+                alt="GitHub icon"
+                height="20px"
+                width="20px"
+              /></button
+          ></a>
+          <a href="https://weather-imp-vue.vercel.app/"
+            ><button type="button">
+              vue front-end app
               <img
                 src="./icons/vuejs.svg"
                 alt="GitHub icon"

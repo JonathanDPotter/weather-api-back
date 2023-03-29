@@ -60,18 +60,6 @@ const routes = {
   },
 };
 
-const routesContainer = document.getElementsByClassName("routes");
+const routePre = document.getElementById("routes");
 
-const keys = Object.keys(routes);
-
-const values = Object.values(routes);
-
-routesContainer[0].innerHTML = keys.map(
-  (key, i) =>
-    `<h3>${key}:</h3> <p class="route-list">${JSON.stringify(values[i])
-      .replace(/},/g, "}, <br />")
-      .replace(/{/g, "{ <br />")
-      .replace(/",/g, '", <br />')
-      .replace(/}/g, "} <br/> }")
-      .replace(/:/g, " : ")}</p>`
-);
+routePre.innerHTML = JSON.stringify(routes, null, 2);

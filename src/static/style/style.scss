@@ -16,11 +16,12 @@ body {
 }
 
 @mixin header-footer {
-  height: 10vh;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
   width: 100vw;
   background-color: $dark;
   color: $text-light;
-  line-height: 10vh;
   left: 0;
 }
 
@@ -41,12 +42,13 @@ main {
 
   h2 {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin: 1rem 0;
     text-decoration: underline;
-    text-underline-offset: 0.5rem;
+    text-underline-offset: 0.25rem;
   }
 
-  .intro, .about {
+  .intro,
+  .about {
     max-width: 60rem;
     margin: 0 auto;
 
@@ -55,15 +57,13 @@ main {
     }
   }
 
-  .routes {
+  #routes {
     margin: 1rem;
-
-    .route-list {
-      margin-left: 1rem;
-    }
   }
+
   .buttons {
     display: flex;
+    justify-content: center;
     gap: 0.5rem;
     padding: 1rem;
 
